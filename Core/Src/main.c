@@ -158,11 +158,16 @@ int main(void)
 
 		char MSG[16] = {0};
 #ifdef SERIAL_DEBUG
+		/*
 		sprintf(MSG, "%.2f", temp);
 
 		printf("Temperatura: %d C\n", *MSG);
 
 		printf("Delay 100\n");
+		*/
+		int_temp = (uint8_t)temp;
+		centesimal_temp = (uint8_t)(temp * 100) % 100;
+		printf("Temperatura: %i.%i", int_temp, centesimal_temp);
 #endif
 		HAL_Delay(100);
 
@@ -172,14 +177,17 @@ int main(void)
 	float temp = lm35_read();
 
 	char MSG[16] = {0};
+	int_temp = (uint8_t)temp;
+	centesimal_temp = (uint8_t)(temp * 100) % 100;
 #ifdef SERIAL_DEBUG
+	/*
 	sprintf(MSG, "%.2f", temp);
 
 	printf("Temperatura: %d C\n", *MSG);
+	*/
+	printf("Temperatura: %i.%i", int_temp, centesimal_temp);
 #endif
 #ifdef SIGFOX_ON
-	int_temp = (uint8_t)temp;
-	centesimal_temp = (uint8_t)(temp * 100) % 100;
 	HT_API_SendFrame();
 #endif
 #endif
