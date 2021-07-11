@@ -1,0 +1,17 @@
+tim.c:52:6:MX_TIM2_Init	32	static
+tim.c:81:6:MX_TIM21_Init	32	static
+tim.c:110:6:HAL_TIM_Base_MspInit	8	static
+tim.c:141:6:HAL_TIM_Base_MspDeInit	8	static
+tim.c:180:6:SdkEvalTimersFindFactors	40	static
+tim.c:218:6:SdkEvalTimersTimConfig	16	static
+tim.c:253:6:ST_MCU_API_TimerCalibration	80	static
+tim.c:284:8:MCU_API_timer_start_carrier_sense	32	static
+tim.c:332:8:MCU_API_timer_start	16	static
+tim.c:371:8:MCU_API_timer_stop	8	static
+tim.c:380:8:MCU_API_timer_stop_carrier_sense	8	static
+tim.c:415:6:ST_MCU_API_WaitForInterrupt	8	static
+tim.c:401:8:MCU_API_timer_wait_for_end	8	static
+tim.c:439:6:setNotifyEndFlag	0	static
+tim.c:443:6:setNIntermediateTimIrqFlag	0	static
+tim.c:448:9:getNotifyEndFlag	0	static
+tim.c:452:10:getNIntermediateTimIrqFlag	0	static

@@ -1,0 +1,16 @@
+gpio.c:46:6:MX_GPIO_Init	56	static
+gpio.c:171:6:S2LPShutdownEnter	8	static
+gpio.c:177:6:S2LPShutdownInit	32	static
+gpio.c:195:6:S2LPShutdownExit	16	static
+gpio.c:203:9:S2LPShutdownCheck	8	static
+gpio.c:209:6:ST_MCU_API_Shutdown	8	static
+gpio.c:221:6:S2LPIRQInit	72	static
+gpio.c:245:6:S2LPIRQEnable	48	static
+gpio.c:275:6:ST_MCU_API_GpioIRQ	16	static
+gpio.c:283:6:ST_MCU_API_LowPower	0	static
+gpio.c:288:6:setLowPowerFlag	0	static
+gpio.c:292:9:getLowPowerFlag	0	static
+gpio.c:296:6:HT_GPIO_UserButtonHandler	8	static
+gpio.c:311:6:HAL_GPIO_EXTI_Callback	8	static
+gpio.c:329:6:setS2lpIrqRaisedFlag	0	static
+gpio.c:333:9:getS2lpIrqRaisedFlag	0	static
