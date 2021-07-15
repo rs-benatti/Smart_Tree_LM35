@@ -19,14 +19,22 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
-#include "adc.h"
-#include "dma.h"
-#include "rtc.h"
-#include "spi.h"
-#include "tim.h"
-#include "usart.h"
-#include "gpio.h"
+
+#include <adc.h>
+#include <dma.h>
+#include <gpio.h>
+#include <main.h>
+#include <rtc.h>
+#include <spi.h>
+#include <stm32l0xx_hal_def.h>
+#include <stm32l0xx_hal_flash.h>
+#include <stm32l0xx_hal_pwr.h>
+#include <stm32l0xx_hal_rcc.h>
+#include <stm32l0xx_hal_rcc_ex.h>
+#include <sys/_stdint.h>
+#include <S2LP_AUX_FEM.h>
+#include <tim.h>
+#include <usart.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -119,7 +127,6 @@ int main(void)
   MX_USART1_UART_Init();
   MX_ADC_Init();
   MX_TIM2_Init();
-  MX_TIM21_Init();
   /* USER CODE BEGIN 2 */
 #ifdef SERIAL_DEBUG
   printf("mcuConfig()\n");
@@ -180,11 +187,6 @@ int main(void)
 	int_temp = (uint8_t)temp;
 	centesimal_temp = (uint8_t)(temp * 100) % 100;
 #ifdef SERIAL_DEBUG
-	/*
-	sprintf(MSG, "%.2f", temp);
-
-	printf("Temperatura: %d C\n", *MSG);
-	*/
 	printf("Temperatura: %i.%i", int_temp, centesimal_temp);
 #endif
 #ifdef SIGFOX_ON

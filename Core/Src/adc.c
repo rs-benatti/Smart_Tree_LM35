@@ -223,20 +223,8 @@ float lm35_read(){
 
 	// Get The Result & Convert To Temp In c_degrees
 	AD_RES = HAL_ADC_GetValue(&hadc);
-	printf("AD_RES: %li\n", AD_RES);
 
 	Temperature = AD_RES * 0.0622045455;
-
-	char MSG[16] = {0};
-
-	sprintf(MSG, "%.2f", Temperature);
-
-	printf("Temperatura: %d C\n", *MSG);
-	//printf("Temperatura: %f C\n", (float32_t)(AD_RES) * 0.0608144796);
-	printf("Temperatura: %i C\n", (uint8_t)(AD_RES * 0.0622045455));
-
-	printf("Delay de 100\n");
-	HAL_Delay(100);
 
 	HAL_ADC_Stop(&hadc);
 
