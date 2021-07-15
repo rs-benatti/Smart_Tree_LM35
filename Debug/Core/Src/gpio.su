@@ -11,6 +11,6 @@ gpio.c:283:6:ST_MCU_API_LowPower	0	static
 gpio.c:288:6:setLowPowerFlag	0	static
 gpio.c:292:9:getLowPowerFlag	0	static
 gpio.c:296:6:HT_GPIO_UserButtonHandler	8	static
-gpio.c:311:6:HAL_GPIO_EXTI_Callback	8	static
-gpio.c:329:6:setS2lpIrqRaisedFlag	0	static
-gpio.c:333:9:getS2lpIrqRaisedFlag	0	static
+gpio.c:316:6:HAL_GPIO_EXTI_Callback	8	static
+gpio.c:334:6:setS2lpIrqRaisedFlag	0	static
+gpio.c:338:9:getS2lpIrqRaisedFlag	0	static
