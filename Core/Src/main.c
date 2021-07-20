@@ -26,13 +26,6 @@
 #include <main.h>
 #include <rtc.h>
 #include <spi.h>
-#include <stm32l0xx_hal_def.h>
-#include <stm32l0xx_hal_flash.h>
-#include <stm32l0xx_hal_pwr.h>
-#include <stm32l0xx_hal_rcc.h>
-#include <stm32l0xx_hal_rcc_ex.h>
-#include <sys/_stdint.h>
-#include <S2LP_AUX_FEM.h>
 #include <tim.h>
 #include <usart.h>
 
